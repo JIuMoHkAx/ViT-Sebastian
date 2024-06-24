@@ -14,7 +14,7 @@
             <Label TextColor="{StaticResource SemiWhite}" FontSize="40" HorizontalOptions="Center" Text="S.E.B.A.S.T.I.A.N"/>
         </VerticalStackLayout>
         <Frame BackgroundColor="{StaticResource SemiWhite}" CornerRadius="50"  Margin="40" Grid.Row="1">
-            <VerticalStackLayout>
+            <VerticalStackLayout Spacing="5">
                 <Label FontAttributes="Bold" Margin="30,10,20,5" Text="Табельный номер" FontSize="Body"/>
                 <StackLayout  Orientation="Horizontal">
                     <Frame BackgroundColor="{StaticResource Secondary}" Padding="10" ZIndex="1" HasShadow="True" BorderColor="{StaticResource SemiWhite}" HeightRequest="56" WidthRequest="56" CornerRadius="28">

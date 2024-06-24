@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:ViT_Sebastian"
     xmlns:views="clr-namespace:ViT_Sebastian.MVVM.Views"
     Shell.FlyoutBehavior="Disabled"
-    Title="ViT_Sebastian">
+    Title=" V.I.T - S.E.B.A.S.T.I.A.N">
 
     <ShellItem Route="LoginView"  FlyoutItemIsVisible="False">
         <ShellContent ContentTemplate="{DataTemplate views:LoginView}"/>
