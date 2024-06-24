@@ -4,12 +4,12 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:ViT_Sebastian"
+    xmlns:views="clr-namespace:ViT_Sebastian.MVVM.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="ViT_Sebastian">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <ShellItem Route="LoginView"  FlyoutItemIsVisible="False">
+        <ShellContent ContentTemplate="{DataTemplate views:LoginView}"/>
+    </ShellItem>
 
 </Shell>

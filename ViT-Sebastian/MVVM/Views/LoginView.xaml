@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:ViT_Sebastian.MVVM.ViewModels"
+             x:Class="ViT_Sebastian.MVVM.Views.LoginView"
+             x:DataType="viewmodel:LoginViewModel"
+             Title="LoginView"
+             Shell.NavBarIsVisible="False">
+
+    <Grid RowDefinitions="Auto,Auto" BackgroundColor="{StaticResource Primary}">
+        <VerticalStackLayout>
+            <Image Margin="30,50,30,30" WidthRequest="250" HorizontalOptions="Center" Source="vitlog.png"/>
+            <Label TextColor="{StaticResource SemiWhite}" FontAttributes="Bold" FontSize="48" HorizontalOptions="Center" Text="V.I.T"/>
+            <Label TextColor="{StaticResource SemiWhite}" FontSize="40" HorizontalOptions="Center" Text="S.E.B.A.S.T.I.A.N"/>
+        </VerticalStackLayout>
+        <Frame BackgroundColor="{StaticResource SemiWhite}" CornerRadius="50"  Margin="40" Grid.Row="1">
+            <VerticalStackLayout>
+                <Label FontAttributes="Bold" Margin="30,10,20,5" Text="Табельный номер" FontSize="Body"/>
+                <StackLayout  Orientation="Horizontal">
+                    <Frame BackgroundColor="{StaticResource Secondary}" Padding="10" ZIndex="1" HasShadow="True" BorderColor="{StaticResource SemiWhite}" HeightRequest="56" WidthRequest="56" CornerRadius="28">
+                        <Image Source="login.png"/>
+                    </Frame>
+                    <Frame BackgroundColor="White" HeightRequest="45" Margin="-20,0,0,0" Padding="0" HasShadow="True" BorderColor="{StaticResource SemiWhite}" HorizontalOptions="FillAndExpand">
+                        <Entry FontSize="Body" Margin="25,0,10,0" VerticalOptions="Center" Placeholder="  Введите номер" Keyboard="Numeric"/>
+                    </Frame>
+                </StackLayout>
+                <Label FontAttributes="Bold" Margin="40,20,20,5" Text="Пароль" FontSize="Body"/>
+                <StackLayout  Orientation="Horizontal">
+                    <Frame BackgroundColor="{StaticResource Secondary}" Padding="15" ZIndex="1" HasShadow="True" BorderColor="{StaticResource SemiWhite}" HeightRequest="56" WidthRequest="56" CornerRadius="28">
+                        <Image Source="pass.png"/>
+                    </Frame>
+                    <Frame BackgroundColor="White" HeightRequest="45" Margin="-20,0,0,0" Padding="0" HasShadow="True" BorderColor="{StaticResource SemiWhite}" HorizontalOptions="FillAndExpand">
+                        <Entry IsPassword="True" FontSize="Body" Margin="25,0,10,0" VerticalOptions="Center" Placeholder="  Введите пароль" Keyboard="Text"/>
+                    </Frame>
+                </StackLayout>
+                <BoxView HeightRequest="2" Color="{StaticResource Gray200}" Margin="5,15,5,0"/>
+                <Button Command="{Binding LoginCommand}" Margin="30,20,30,5" Text="Войти" TextColor="{StaticResource SemiWhite}" FontAttributes="Bold" FontSize="20"/>
+            </VerticalStackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>
