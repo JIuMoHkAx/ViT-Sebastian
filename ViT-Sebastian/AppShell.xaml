@@ -11,5 +11,17 @@
     <ShellItem Route="LoginView"  FlyoutItemIsVisible="False">
         <ShellContent ContentTemplate="{DataTemplate views:LoginView}"/>
     </ShellItem>
+    
+    <TabBar>
+        <Tab Title="Охват" Icon="task.png" Route="CoverageView">
+            <ShellContent  ContentTemplate="{DataTemplate views:CoverageView}" />
+        </Tab>
+        <Tab Title="Расписание" Icon="shift.png" Route="ScheduleView" >
+            <ShellContent ContentTemplate="{DataTemplate views:ScheduleView}"/>
+        </Tab>
+        <Tab Title="Информация"  Icon="about.png" Route="AboutView">
+            <ShellContent ContentTemplate="{DataTemplate views:AboutView}"/>
+        </Tab>
+    </TabBar>
 
 </Shell>

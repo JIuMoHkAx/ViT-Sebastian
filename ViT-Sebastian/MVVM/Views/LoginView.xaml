@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:viewmodel="clr-namespace:ViT_Sebastian.MVVM.ViewModels"
              x:Class="ViT_Sebastian.MVVM.Views.LoginView"
-             x:DataType="viewmodel:LoginViewModel"
              Title="LoginView"
              Shell.NavBarIsVisible="False">
 
@@ -34,7 +32,7 @@
                     </Frame>
                 </StackLayout>
                 <BoxView HeightRequest="2" Color="{StaticResource Gray200}" Margin="5,15,5,0"/>
-                <Button Command="{Binding LoginCommand}" Margin="30,20,30,5" Text="Войти" TextColor="{StaticResource SemiWhite}" FontAttributes="Bold" FontSize="20"/>
+                <Button Clicked="Button_Clicked" Margin="30,20,30,5" Text="Войти" TextColor="{StaticResource SemiWhite}" FontAttributes="Bold" FontSize="20"/>
             </VerticalStackLayout>
         </Frame>
     </Grid>
