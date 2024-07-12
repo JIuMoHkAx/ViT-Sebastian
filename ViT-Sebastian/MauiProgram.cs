@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using ViT_Sebastian.MVVM.Views;
 
 namespace ViT_Sebastian
 {
@@ -18,7 +19,10 @@ namespace ViT_Sebastian
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
-
+            builder.Services.AddSingleton<LoginView>();
+            builder.Services.AddSingleton<ScheduleView>();
+            builder.Services.AddSingleton<CoverageView>();
+            builder.Services.AddSingleton<AboutView>();
             return builder.Build();
         }
     }

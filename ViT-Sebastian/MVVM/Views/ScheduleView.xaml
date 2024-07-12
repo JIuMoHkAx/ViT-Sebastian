@@ -2,12 +2,31 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ViT_Sebastian.MVVM.Views.ScheduleView"
+             x:DataType="viewModels:ScheduleVM"
+             xmlns:viewModels ="clr-namespace:ViT_Sebastian.MVVM.ViewModels"
              Title="ScheduleView"
              Shell.NavBarIsVisible="False">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    
+    <Grid BackgroundColor="{StaticResource SemiWhite}"
+          ColumnDefinitions="*,*"
+          RowDefinitions="200,*">
+        <Image Margin="20,0,50,0" Source="vitlog.png"/>
+        <Frame BackgroundColor="{StaticResource SemiWhite}" BorderColor="White"  Margin="-30,30,10,30" Padding="5"
+               CornerRadius="30" Grid.Column="1">
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <VerticalStackLayout VerticalOptions="Center">
+                    <Label FontSize="14" Text="{Binding CurrentDate, StringFormat='{0:dddd}'}"/>
+                    <Label Text="{Binding CurrentDate, StringFormat='{0:MMM yyyy}'}"/>
+                </VerticalStackLayout>
+                <Frame BorderColor="White" HasShadow="True"  Margin="0,20,20,20" Padding="0">
+                    <DatePicker Margin="0,0,0,0" FontAttributes="Bold" Date="{Binding CurrentDate, Mode=TwoWay}" FontSize="60" Format="dd"/>
+                </Frame>
+            </HorizontalStackLayout>
+        </Frame>
+        <Frame  Padding="10" BackgroundColor="{StaticResource White}" HasShadow="True" Grid.Row="1" Grid.ColumnSpan="2" 
+               CornerRadius="50"
+               Margin="0,0,0,-30">
+            
+        </Frame>
+    </Grid>
 </ContentPage>
